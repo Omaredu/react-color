@@ -6,6 +6,7 @@ import color from '../../helpers/color'
 
 import { ColorWrap, EditableInput, Checkboard } from '../common'
 import BlockSwatches from './BlockSwatches'
+import { NONAME } from 'dns';
 
 export const Block = ({ onChange, onSwatchHover, hex, colors, width, triangle,
   styles: passedStyles = {}, className = '' }) => {
@@ -22,18 +23,16 @@ export const Block = ({ onChange, onSwatchHover, hex, colors, width, triangle,
       card: {
         width,
         background: '#fff',
-        boxShadow: '0 1px rgba(0,0,0,.1)',
-        borderRadius: '6px',
         position: 'relative',
       },
       head: {
         height: '110px',
         background: hex,
-        borderRadius: '6px 6px 0 0',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         position: 'relative',
+        transition: '.3s',
       },
       body: {
         padding: '10px',
@@ -53,6 +52,7 @@ export const Block = ({ onChange, onSwatchHover, hex, colors, width, triangle,
         top: '-10px',
         left: '50%',
         marginLeft: '-10px',
+        display: 'none',
       },
       input: {
         width: '100%',
@@ -65,6 +65,7 @@ export const Block = ({ onChange, onSwatchHover, hex, colors, width, triangle,
         borderRadius: '4px',
         padding: '0 7px',
         boxSizing: 'border-box',
+        display: 'none',
       },
     },
     'hide-triangle': {

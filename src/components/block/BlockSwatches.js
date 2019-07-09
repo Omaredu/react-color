@@ -16,7 +16,7 @@ export const BlockSwatches = ({ colors, onClick, onSwatchHover }) => {
         float: 'left',
         marginRight: '10px',
         marginBottom: '10px',
-        borderRadius: '4px',
+        borderRadius: '50%',
       },
       clear: {
         clear: 'both',
@@ -34,7 +34,7 @@ export const BlockSwatches = ({ colors, onClick, onSwatchHover }) => {
           onClick={ onClick }
           onHover={ onSwatchHover }
           focusStyle={{
-            boxShadow: `0 0 4px ${ c }`,
+            display: 'block',
           }}
         />
       )) }
